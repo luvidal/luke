@@ -1,0 +1,17 @@
+notes.txt
+
+
+RTCMultiConnection
+https://www.rtcmulticonnection.org/
+
+Broadcast
+demos/Scalable-Broadcast.html
+
+
+
+Firefox doesn’t close onstreamended
+
+RTCPeerConnection.getLocalStreams/getRemoteStreams are deprecated. Use RTCPeerConnection.getSenders/getReceivers instead.
+
+
+Problem with Safari

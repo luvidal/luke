@@ -1,0 +1,63 @@
+<title>Luke Surveillance Kit 1.0</title>
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel='stylesheet' href='lib/fontawesome_5.14.0/css/fontawesome.css'>
+<link rel='stylesheet' href='lib/fontawesome_5.14.0/css/solid.css'>
+<link rel='stylesheet' href='lib/bootstrap_4.5.0/bootstrap.min.css'>
+<link rel='stylesheet' href='css/index.css'>
+
+<div id='tabs' class='btn-group btn-group-lg bg-primary pt-5 mb-2'>
+	<button id='capture' type='button' class='btn rounded-top text-white'>
+		<i class='fas fa-lg fa-video mr-2'></i>Capture
+	</button>
+	<button id='view' type='button' class='btn rounded-top text-white'>
+		<i class='fas fa-lg fa-eye mr-2'></i>View
+	</button>
+</div>
+
+<content class='d-flex'>
+	<div id='thumbnails' class='rounded m-2 d-flex'></div>
+	<div id='mainvideo'  class='rounded m-2'></div>
+	<div id='settings'   class='rounded m-2 p-2'>
+		<h5 class='m-2'>Camera</h5>
+		<div id='setitems' class='d-flex'>
+			<div class='setting'>
+				<i class='fas fa-tag mr-1'></i>Label
+				<input type='text' class='form-control my-1' id='camera'>
+			</div>
+			<div class='setting'>
+				<i class='fas fa-video mr-1'></i>Device
+				<select class='form-control my-1' id='device'></select>
+			</div>
+		</div>
+	</div>
+</content>
+
+<footer class='bg-secondary text-light text-center py-1 px-2'>
+	<small class='float-left p-2 text-nowrap'>©2020 Luke Surveillance Kit</small>
+	<div class='btn-group dropup float-right'>
+		<button id='user' type='button' class='btn btn-sm btn-secondary dropdown-toggle mt-1' data-toggle='dropdown'></button>
+		<div id='user-menu' class='dropdown-menu dropdown-menu-right text-center p-5'>
+			<input id='origin' type='hidden'>
+			<img   class='rounded-circle m-3' width='96' height='96' src='img/nouser-secondary.png'>
+			<name  class='d-block font-weight-bold'></name>
+			<email class='d-block'></email>
+			<button id='logout' class='btn btn-block bg-secondary text-white mt-4'>Close Session</button>
+		</div>
+	</div>
+</footer>
+
+<script src='lib/jquery_3.5.1/jquery.min.js'></script>
+<script src='lib/bootstrap_4.5.0/bootstrap.bundle.min.js'></script>
+<script src='lib/bootstrap-notify_3.1.5/bootstrap-notify.min.js'></script>
+
+<script src='https://rtc.edictus.com/socket.io/socket.io.js?y'></script>
+<script src='lib/rtcmulticonnection_3.6.9/adapter.js?y'></script>
+<script src='lib/rtcmulticonnection_3.6.9/RTCMultiConnection.js?y'></script>
+<script src='js/connection.js?y'></script>
+
+<script src='js/utils.js?y'></script>
+<script src='js/notify.js?y'></script>
+<script src='js/index.js?y'></script>

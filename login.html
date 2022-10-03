@@ -1,0 +1,74 @@
+<title>Luke Surveillance Kit v1.0</title>
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel='stylesheet' href='lib/fontawesome_5.14.0/css/fontawesome.css'>
+<link rel='stylesheet' href='lib/fontawesome_5.14.0/css/solid.css'>
+<link rel='stylesheet' href='lib/bootstrap_4.5.0/bootstrap.min.css'>
+<style>
+
+	div#login
+	{
+		width:340;
+	}
+
+	div.social a
+	{
+		background-repeat: no-repeat;
+		background-position:left center;
+	}
+
+	div.social a#g-btn
+	{
+		border:1px solid #DDD;
+		background-color:white;
+		background-image: url('https://login.edictus.com/img/login-google.png');
+	}
+
+	div.social a#f-btn
+	{
+		border:1px solid #1977F2;
+		background-color:#1977F2;
+		background-image: url('https://login.edictus.com/img/login-facebook.png');
+	}
+
+</style>
+
+<!------------------------------------------------- dom start --------------------------------------------------->
+
+<body class='d-flex justify-content-center align-items-center h-100'>
+	<div id='login' class='border rounded text-center px-5'>
+		<img class='rounded-circle mt-5 mb-3' width='120' height='120' src='img/nouser-secondary.png'>
+		<h5 class='text-secondary'>Authentication</h5>
+		<div class='social my-5'>
+			<a id='g-btn' href='#' class='btn btn-block'>&nbsp;</a>
+			<a id='f-btn' href='#' class='btn btn-block'>&nbsp;</a>
+		</div>
+		<small class='mt-3 float-right text-muted'>&copy; Luke Surveillance Kit 2020</p>
+	</div>
+</body>
+
+<!------------------------------------------------- scripts --------------------------------------------------->
+
+<script src='lib/jquery_3.5.1/jquery.min.js'></script>
+<script src='lib/bootstrap_4.5.0/bootstrap.bundle.min.js'></script>
+
+<script src='js/utils.js'></script>
+<script>
+
+	$( ready =>
+	{
+		let jwt = location.hash.replace(/#/g,'');
+		if (jwt)
+		{
+			localStorage.setItem('jwt', jwt);
+			history.replaceState(null, null, ' ');
+			top.location = path;
+		}
+
+		$('#f-btn').on('click', ev => oauth('facebook') );
+		$('#g-btn').on('click', ev => oauth('google') );
+	});
+
+</script>

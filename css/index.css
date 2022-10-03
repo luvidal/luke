@@ -1,0 +1,88 @@
+
+body
+{
+	height:100%;
+	display:flex;
+	flex-flow:column;
+}
+
+content
+{
+	flex:1 1 auto;
+	padding:10;
+}
+
+footer
+{
+	flex:0 1 30px;
+}
+
+div#mainvideo
+{
+	background:brown;
+	flex:1 1 auto;
+
+	position:relative;
+	padding:56.25% 0 0;
+}
+
+div#settings, div#thumbnails
+{
+	background:#DDD;
+	flex:0 0 15%;
+}
+
+div.thumbnail
+{
+	position:relative;
+	margin:20px;
+	background:#888;
+}
+
+@media screen and (orientation:landscape)
+{
+	content { flex-direction:row; }
+	div#thumbnails, div#setitems { flex-flow:column; }
+	div.thumbnail {	width:calc(100% - 40); height:240; }
+}
+
+@media screen and (orientation:portrait)
+{
+	content { flex-direction:column; }
+	div#thumbnails, div#setitems { flex-flow:row; }
+	div.thumbnail {	height:calc(100% - 40); width:320; }
+}
+
+div.setting
+{
+	width:320px; margin:5;
+}
+
+div.thumbnail:hover
+{
+	opacity:0.75;
+	cursor:hand;
+}
+
+div#tabs .btn:focus
+{
+	box-shadow:none;
+}
+
+.video
+{
+	width:100%; 
+	height:100%; 
+	position:absolute; 
+	left:0; top:0; right:0; bottom:0;
+}
+
+.label
+{
+	position:absolute; 
+	bottom:5px; 
+	right:5px; 
+	color:white; 
+	font-size:15px; 
+	text-shadow:1px 1px black;
+}
