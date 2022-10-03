@@ -1,2 +1,2 @@
 # luke
- Turns your old mobile phones into a survellance kit
+ Turns your old mobile phone into a survellance kit
