@@ -1,2 +1,2 @@
 # luke
- Turns your old mobile phone into a survellance kit
+ A Node.js project that turns your old mobile phone into a survellance kit
